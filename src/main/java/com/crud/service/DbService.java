@@ -1,7 +1,7 @@
-package com.crud.tasks.service;
+package com.crud.service;
 
 import com.crud.domain.Task;
-import com.crud.tasks.repository.TaskRepository;
+import com.crud.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -17,5 +17,13 @@ public class DbService {
 
     public Optional<Task> getTaskById(Long id){
         return repository.findById(id);
+    }
+
+    public Task saveTask(final Task task){
+        return repository.save(task);
+    }
+
+    public void deleteTaskByID(Long taskId) {
+        repository.deleteById(taskId);
     }
 }

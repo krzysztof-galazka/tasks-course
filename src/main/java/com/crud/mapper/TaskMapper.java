@@ -1,4 +1,4 @@
-package com.crud.tasks.mapper;
+package com.crud.mapper;
 
 import com.crud.domain.Task;
 import com.crud.domain.TaskDto;
