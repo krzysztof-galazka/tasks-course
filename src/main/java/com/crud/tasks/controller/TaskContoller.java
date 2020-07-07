@@ -1,8 +1,8 @@
-package com.crud.controller;
+package com.crud.tasks.controller;
 
-import com.crud.domain.TaskDto;
-import com.crud.mapper.TaskMapper;
-import com.crud.service.DbService;
+import com.crud.tasks.domain.TaskDto;
+import com.crud.tasks.mapper.TaskMapper;
+import com.crud.tasks.service.DbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
