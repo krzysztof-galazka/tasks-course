@@ -42,6 +42,15 @@ public class SimpleEmailService {
         };
     }
 
+    public MimeMessagePreparator createMimeDailyMessage(final Mail mail){
+        return mimeMessage -> {
+            MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
+            messageHelper.setTo(mail.getMailTo());
+            messageHelper.setSubject(mail.getSubject());
+            messageHelper.setText(mailCreatorService.buildSecondTrelloCardEmail(mail.getMessage()), true);
+        };
+    }
+
     private SimpleMailMessage createMailMessage(final Mail mail) {
 
         SimpleMailMessage mailMessage = new SimpleMailMessage();
